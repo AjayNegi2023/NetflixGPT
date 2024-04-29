@@ -6,6 +6,7 @@ import { auth } from "../Utils/Firebase"
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux"
 import { addUser } from '../Utils/userSlice';
+import { BG_URL } from '../Utils/Constants';
 const Login = () => {
   const [isSignIn, setSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -75,7 +76,7 @@ const Login = () => {
     <div>
       <Header />
       <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/fb548c0a-8582-43c5-9fba-cd98bf27452f/IN-en-20240326-popsignuptwoweeks-perspective_alpha_website_medium.jpg" alt="bg" />
+        <img src={BG_URL} alt="bg" />
       </div>
 
       <form onSubmit={(e) => e.preventDefault()} className='absolute w-3/12 p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-80'>

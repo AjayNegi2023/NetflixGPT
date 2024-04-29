@@ -22,7 +22,7 @@ const Body = () => {
        }
     ]);
 
-    useEffect(()=>{
+  useEffect(()=>{
       onAuthStateChanged(auth, (user) => {
         if (user) {
           const {uid,email,password,photoURL} = user.uid;
